@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/movie-awards/static/css/main.9617c004.chunk.css",
-    "main.js": "/movie-awards/static/js/main.1e703f90.chunk.js",
-    "main.js.map": "/movie-awards/static/js/main.1e703f90.chunk.js.map",
+    "main.js": "/movie-awards/static/js/main.3993a998.chunk.js",
+    "main.js.map": "/movie-awards/static/js/main.3993a998.chunk.js.map",
     "runtime-main.js": "/movie-awards/static/js/runtime-main.1c4d894a.js",
     "runtime-main.js.map": "/movie-awards/static/js/runtime-main.1c4d894a.js.map",
     "static/js/2.4acd8ad5.chunk.js": "/movie-awards/static/js/2.4acd8ad5.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.1c4d894a.js",
     "static/js/2.4acd8ad5.chunk.js",
     "static/css/main.9617c004.chunk.css",
-    "static/js/main.1e703f90.chunk.js"
+    "static/js/main.3993a998.chunk.js"
   ]
 }
