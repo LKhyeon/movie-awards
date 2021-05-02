@@ -14,6 +14,13 @@ class App extends Component {
             nominations: [],
         }
         this.changeKey = this.changeKey.bind(this);
+        this.nominateMovie = this.nominateMovie.bind(this);
+    }
+
+    nominateMovie = (event) => {
+        this.setState({
+            nominations: [...this.state.nominations, event.target.getAttribute("movie")]
+        });
     }
 
     changeKey = (event) => {
@@ -32,7 +39,7 @@ class App extends Component {
                 </header>
                 <Search eventHandler={this.changeKey}/>
                 <div className="Container">
-                    <MovieList keyWord={this.state.keyWord}/>
+                    <MovieList keyWord={this.state.keyWord} eventHandler={this.nominateMovie}/>
                     <Nomination entry={this.state.nominations}/>
                 </div>
             </div>
