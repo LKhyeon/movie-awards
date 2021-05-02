@@ -13,9 +13,20 @@ class App extends Component {
             keyWord: "",
             nominations: [],
         }
+        this.displayBanner = this.displayBanner.bind(this);
         this.changeKey = this.changeKey.bind(this);
         this.nominateMovie = this.nominateMovie.bind(this);
         this.removeNomination = this.removeNomination.bind(this);
+    }
+
+    displayBanner = () => {
+        if (this.state.nominations.length === 5) {
+            return (
+                <div className="Banner">
+                    YOU HAVE NOMINATED 5 MOVIES IN TOTAL.
+                </div>
+            );
+        }
     }
 
     nominateMovie = (event) => {
@@ -45,6 +56,7 @@ class App extends Component {
     render() {
         return (
             <div className="App">
+                {this.displayBanner()}
                 <header className="App-header">
                     <h1>
                         The Shoppies

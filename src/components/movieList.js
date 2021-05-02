@@ -60,7 +60,8 @@ class MovieList extends Component {
                 <div key={this.props.keyWord + i.toString()}>
                     {info}
                     <button movie={info} className="Nominate" onClick={this.props.eventHandler}
-                        disabled={this.props.nominations.includes(info)}>
+                        disabled={this.props.nominations.length === 5 
+                                    || this.props.nominations.includes(info)}>
                         Nominate
                     </button>
                 </div>
@@ -75,7 +76,7 @@ class MovieList extends Component {
                 <p className="KeyWord">
                     {this.props.keyWord === "" ?
                         "Please type a movie title" :
-                        "Results for \"" + this.props.keyWord + "\""}
+                        `Results for "${this.props.keyWord}"`}
                 </p>
                 <div>
                     {this.populateList()}
