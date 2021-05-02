@@ -6,7 +6,7 @@ const Search = ({eventHandler}) => {
 			<p> MOVIE TITLE </p>
 			<input 
 				placeholder={"Search a movie"}
-				onChange={eventHandler} />
+				onKeyPress={eventHandler} />
 		</div>
 	)
 }

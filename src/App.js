@@ -11,16 +11,18 @@ class App extends Component {
         super(props)
         this.state = {
             keyWord: "",
-            movieList: [],
             nominations: [],
         }
-        this.triggerSearch = this.triggerSearch.bind(this);
+        this.changeKey = this.changeKey.bind(this);
     }
 
-    triggerSearch = (event) => {
-        this.setState({
-            keyWord: event.target.value
-        });
+    changeKey = (event) => {
+        if (event.key === 'Enter') {
+            console.log(event.target.value)
+            this.setState({
+                keyWord: event.target.value
+            });
+        }
     }
 
     render() {
@@ -31,9 +33,9 @@ class App extends Component {
                         The Shoppies
                     </h1>
                 </header>
-                <Search eventHandler={this.triggerSearch}/>
+                <Search eventHandler={this.changeKey}/>
                 <div className="Container">
-                    <MovieList keyWord={this.state.keyWord} entry={this.state.movieList}/>
+                    <MovieList keyWord={this.state.keyWord}/>
                     <Nomination entry={this.state.nominations}/>
                 </div>
             </div>
