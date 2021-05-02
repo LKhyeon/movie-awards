@@ -1,0 +1,23 @@
+.Search {
+	background-color: white;
+
+	border-style: solid;
+	border-color: lightgray;
+	border-width: 1px;
+
+	padding-left: 2vw;
+	padding-right: 2vw;
+	padding-top: 4.5vh;
+	padding-bottom: 4.5vh;
+
+
+}
+
+.Search p {
+	margin-top: 1vh;
+	margin-bottom: 1vh;
+}
+
+.Search input {
+	width: calc(100% - 2vw);
+}
