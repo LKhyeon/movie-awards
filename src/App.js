@@ -18,7 +18,6 @@ class App extends Component {
 
     changeKey = (event) => {
         if (event.key === 'Enter') {
-            console.log(event.target.value)
             this.setState({
                 keyWord: event.target.value
             });

@@ -11,18 +11,35 @@ class MovieList extends Component {
         }
         this.fetchData = this.fetchData.bind(this);
         this.populateList = this.populateList.bind(this);
+        this.compareArrays = this.compareArrays.bind(this);
+    }
+
+    compareArrays(arr1, arr2) {
+    	if (arr1.length !== arr2.length) {
+    		return false;
+    	} else {
+    		for (let i=0; i < arr1.length; i++) {
+    			for (let j=0; j < arr2.length; j++) {
+    				if (arr1[i].Title !== arr2[i].Title) {
+    					return false;
+    				}
+    			}
+    		}
+    	}
+    	return true;
     }
   	
     fetchData(keyWord) {
     	if (keyWord !== "") {
-	    	fetch("http://www.omdbapi.com/?s=" + keyWord + "&apikey=39dd2421")
+	    	fetch("https://www.omdbapi.com/?s=" + keyWord + "&apikey=39dd2421")
 	        .then(res => {
 	            if (res.status === 200) {
 	                return res.json()
 	            }
 	        }).then((res) => {
-	        	const newEntries = (typeof res.Search === "undefined") ? [] : res.Search;
-	        	if (this.state.entries !== newEntries) {
+	        	const newEntries = res.Search;
+	        	if ((typeof newEntries !== "undefined")
+	        		&& (!this.compareArrays(this.state.entries, newEntries))) {
 	        		this.setState({
 	        			entries: newEntries
 	        		})
@@ -32,7 +49,7 @@ class MovieList extends Component {
     }
 
     populateList() {
-    	// this.fetchData(this.props.keyWord)
+    	this.fetchData(this.props.keyWord)
     	const movies = [];
     	for (let i = 0; i < this.state.entries.length; i++) {
     		movies.push(
