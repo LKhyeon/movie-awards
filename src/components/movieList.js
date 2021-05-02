@@ -37,13 +37,12 @@ class MovieList extends Component {
 	                return res.json()
 	            }
 	        }).then((res) => {
-	        	const newEntries = res.Search;
-	        	if ((typeof newEntries !== "undefined")
-	        		&& (!this.compareArrays(this.state.entries, newEntries))) {
+	        	const newEntries = (typeof res.Search !== "undefined") ? res.Search : [];
+	        	if (!this.compareArrays(this.state.entries, newEntries)) {
 	        		this.setState({
 	        			entries: newEntries
 	        		})
-	        	}
+	        	} 
 	        }).catch((error) => {console.log(error)})
     	}
     }
