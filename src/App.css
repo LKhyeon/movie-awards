@@ -1,11 +1,10 @@
 .App {
-
   margin-top: 10vh;
   margin-left: 10vw;
   margin-right: 10vw;
 }
 
-.App-header {
-  
+.App .Container {
+  display: flex;
 }
 

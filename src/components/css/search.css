@@ -1,15 +1,16 @@
 .Search {
 	background-color: white;
 
+	margin-bottom: 3.5vh;
+
 	border-style: solid;
 	border-color: lightgray;
 	border-width: 1px;
 
-	padding-left: 2vw;
-	padding-right: 2vw;
-	padding-top: 4.5vh;
-	padding-bottom: 4.5vh;
-
+	padding-left: min(2vw, 15px);
+	padding-right: min(2vw, 15px);
+	padding-top: min(3vh, 30px);
+	padding-bottom: min(4vh, 30px);
 
 }
 
