@@ -1,14 +1,14 @@
 import "./css/nomination.css"
 
-const Nomination = ({entry}) => {
+const Nomination = ({entry, eventHandler}) => {
 
-	const populateList = () => {
+    const populateList = () => {
         const nominations = [];
         for (let i = 0; i < entry.length; i++) {
             nominations.push(
                 <div key={entry[i] + i.toString()}>
                     {entry[i]}
-                    <button movie={entry[i]} className="Remove">
+                    <button movie={entry[i]} className="Remove" onClick={eventHandler}>
                         Remove
                     </button>
                 </div>

@@ -59,7 +59,8 @@ class MovieList extends Component {
             movies.push(
                 <div key={this.props.keyWord + i.toString()}>
                     {info}
-                    <button movie={info} className="Nominate" onClick={this.props.eventHandler}>
+                    <button movie={info} className="Nominate" onClick={this.props.eventHandler}
+                        disabled={this.props.nominations.includes(info)}>
                         Nominate
                     </button>
                 </div>
