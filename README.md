@@ -10,13 +10,13 @@ https://lkhyeon.github.io/movie-awards/
 
 Search for 5 of your favorite movies using the search bar and then nominate them. 
 
-You will not be allowed to nominate a movie you've already nominated before and you will not be allowed to nominate more than 5 movies. If you wish to, you can always remove a movie from the nominations.
+You will not be allowed to nominate a movie that is currently being nominated and you will not be allowed to nominate more than 5 movies. If you wish to, you can always remove a movie from the nominations.
 
 Once you've successfully nominated 5 movies, you will see a banner indicating that 5 movies have been nominated.
 
 ## Caution
 
-Please note that **this app saves data to your local storage**. 
+Please note that **this app saves data to your local storage of your browser**. 
 
 The data being saved will be your nominations and the purpose of saving is to make sure you can continue to nominate movies from where you left off previously (e.g., after refreshing the page or leaving the page). 
 
