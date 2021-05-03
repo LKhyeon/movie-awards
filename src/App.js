@@ -12,10 +12,9 @@ class App extends Component {
 
         // Check the local storage and load nominations if needed.
         const record = JSON.parse(localStorage.getItem('ShpNomination'));
-
         this.state = {
             keyWord: "",
-            nominations: (typeof record !== 'undefined') ? record : [],
+            nominations: (record !== null) ? record : [],
         }
         this.saveNominations = this.saveNominations.bind(this);
         this.displayBanner = this.displayBanner.bind(this);
