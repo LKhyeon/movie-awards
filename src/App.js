@@ -9,14 +9,23 @@ import './App.css';
 class App extends Component {
     constructor(props) {
         super(props)
+
+        // Check the local storage and load nominations if needed.
+        const record = JSON.parse(localStorage.getItem('ShpNomination'));
+
         this.state = {
             keyWord: "",
-            nominations: [],
+            nominations: (typeof record !== 'undefined') ? record : [],
         }
+        this.saveNominations = this.saveNominations.bind(this);
         this.displayBanner = this.displayBanner.bind(this);
         this.changeKey = this.changeKey.bind(this);
         this.nominateMovie = this.nominateMovie.bind(this);
         this.removeNomination = this.removeNomination.bind(this);
+    }
+
+    saveNominations = () => {
+        localStorage.setItem('ShpNomination', JSON.stringify(this.state.nominations));
     }
 
     displayBanner = () => {
@@ -66,7 +75,8 @@ class App extends Component {
                 <div className="Container">
                     <MovieList keyWord={this.state.keyWord} nominations={this.state.nominations}
                                 eventHandler={this.nominateMovie}/>
-                    <Nomination entry={this.state.nominations} eventHandler={this.removeNomination}/>
+                    <Nomination entry={this.state.nominations} eventHandler={this.removeNomination}
+                                saveFunc={this.saveNominations}/>
                 </div>
             </div>
         )

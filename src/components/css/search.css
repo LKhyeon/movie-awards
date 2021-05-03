@@ -3,7 +3,7 @@
 .Search {
 	background-color: white;
 
-	margin-bottom: 2.5vh;
+	margin-bottom: 2vw;
 
 	border-style: solid;
 	border-color: #6497bf;
@@ -13,7 +13,6 @@
 	padding-right: min(2vw, 15px);
 	padding-top: min(3vh, 30px);
 	padding-bottom: min(4vh, 30px);
-
 }
 
 .Search p {
@@ -26,5 +25,14 @@
 }
 
 .Search input {
-	width: calc(100% - 2vw);
+	background-image: url("../../img/search.png");
+	background-repeat: no-repeat;
+	background-size: 4vh;
+	background-position: 0.7vw;
+
+	padding-left: 3.5vw;
+
+	width: calc(100% - 4vw);
+	height: 4vh;
+
 }

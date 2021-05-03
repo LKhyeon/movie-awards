@@ -3,9 +3,9 @@ import "./css/search.css"
 const Search = ({eventHandler}) => {
     return (
         <div className="Search">
-            <p> MOVIE TITLE </p>
-            <input 
-                placeholder={"Search a movie"}
+            <p> SEARCH MOVIE TITLES TO NOMINATE </p>
+            <input
+                placeholder={"Type here for the movie titles"}
                 onChange={eventHandler} />
         </div>
     )

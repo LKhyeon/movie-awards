@@ -1,8 +1,10 @@
 import "./css/nomination.css"
 
-const Nomination = ({entry, eventHandler}) => {
+const Nomination = ({entry, eventHandler, saveFunc}) => {
 
     const populateList = () => {
+        saveFunc();
+
         const nominations = [];
         for (let i = 0; i < entry.length; i++) {
             nominations.push(
