@@ -6,11 +6,11 @@ const Nomination = ({entry, eventHandler}) => {
         const nominations = [];
         for (let i = 0; i < entry.length; i++) {
             nominations.push(
-                <div key={entry[i] + i.toString()}>
-                    {entry[i]}
+                <div className="entry" key={entry[i] + i.toString()}>
                     <button movie={entry[i]} className="Remove" onClick={eventHandler}>
                         Remove
                     </button>
+                    {entry[i]}
                 </div>
             )
         }

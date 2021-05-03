@@ -1,12 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Antonio&display=swap');
+
 .App {
   /*margin-top: 10vh;*/
   margin-left: 10vw;
   margin-right: 10vw;
 }
 
+.App-header {
+  font-family: 'Antonio', sans-serif;
+  font-size: 150%;
+  text-align: center;
+}
+
 .App .Banner {
+  padding-top: 1%;
+  padding-bottom: 1%;
+
+  border-style: solid;
+  border-color: darkred;
+  border-width: 3px;
+
   background-color: red;
   color: white;
+
+  font-size: 120%;
+  font-weight: bold;
+  text-align: center;
+
 }
 
 .App .Container {

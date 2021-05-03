@@ -1,4 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+
 .Nomination {
+	font-family: 'Cabin', sans-serif;
+
 	background-color: white;
 
 	width: calc(50% - 5vw);
@@ -8,7 +12,7 @@
 	margin-left: 1vw;
 
 	border-style: solid;
-	border-color: lightgray;
+	border-color: #6497bf;
 	border-width: 1px;
 
 	padding-left: 2vw;
@@ -18,9 +22,66 @@
 
 }
 
+.Nomination .entry {
+	margin-bottom: 0.5vh;
+
+	border-style: solid;
+	border-color: #f44336;
+	border-width: 2px;
+	border-radius: 3px;
+
+	padding-left: 1vw;
+	padding-right: 1vw;
+	padding-top: 0.7vh;
+	padding-bottom: 0.7vh;
+
+}
+
 .Nomination .KeyWord {
 	font-weight: bold;
+	font-size: 120%;
 
 	margin-top: 1vh;
 	margin-bottom: 1vh;
+}
+
+
+.Nomination .Remove {
+	background-color: #f44336;
+	color: white;
+
+	margin-right: 1vw;
+
+	border-style: solid;
+	border-color: #f44336;
+	border-width: 2px;
+	border-radius: 3px;
+
+	padding-left: 0.6vw;
+	padding-right: 0.6vw;
+	padding-top: 0.6vh;
+	padding-bottom: 0.6vh;
+
+	transition-duration: 0.3s;
+}
+
+.Nomination .Remove:hover {
+	background-color: #b01b10;
+
+	border-color: #b01b10;
+
+	padding-left: 0.6vw;
+	padding-right: 0.6vw;
+	padding-top: 0.6vh;
+	padding-bottom: 0.6vh;
+}
+
+.Nomination .Remove:disabled {
+	background-color: white;
+	color: #f44336;
+
+	border-style: solid;
+	border-color: #f44336;
+	border-width: 2px;
+	border-radius: 3px;
 }

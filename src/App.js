@@ -23,7 +23,7 @@ class App extends Component {
         if (this.state.nominations.length === 5) {
             return (
                 <div className="Banner">
-                    YOU HAVE NOMINATED 5 MOVIES IN TOTAL.
+                    YOU HAVE NOMINATED 5 MOVIES IN TOTAL
                 </div>
             );
         }

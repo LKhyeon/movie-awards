@@ -1,10 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+
 .Search {
 	background-color: white;
 
-	margin-bottom: 3.5vh;
+	margin-bottom: 2.5vh;
 
 	border-style: solid;
-	border-color: lightgray;
+	border-color: #6497bf;
 	border-width: 1px;
 
 	padding-left: min(2vw, 15px);
@@ -15,6 +17,10 @@
 }
 
 .Search p {
+	font-family: 'Cabin', sans-serif;
+	font-weight: bold;
+	font-size: 120%;
+
 	margin-top: 1vh;
 	margin-bottom: 1vh;
 }

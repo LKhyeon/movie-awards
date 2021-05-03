@@ -55,15 +55,18 @@ class MovieList extends Component {
         this.fetchData(this.props.keyWord)
         const movies = [];
         for (let i = 0; i < this.state.entries.length; i++) {
-            const info = `${this.state.entries[i].Title} (${this.state.entries[i].Year})`
+            const info = `${this.state.entries[i].Title} (${this.state.entries[i].Year})`;
+
+            const limitReached = this.props.nominations.length === 5;
+            const selected = this.props.nominations.includes(info);
             movies.push(
-                <div key={this.props.keyWord + i.toString()}>
-                    {info}
+                <div className="entry" key={this.props.keyWord + i.toString()}>
                     <button movie={info} className="Nominate" onClick={this.props.eventHandler}
-                        disabled={this.props.nominations.length === 5 
-                                    || this.props.nominations.includes(info)}>
-                        Nominate
+                        disabled={limitReached || selected}>
+                        {(limitReached)? "Disabled" : 
+                            ((selected) ? "Nominated" : "Nominate")}
                     </button>
+                    {info}
                 </div>
             )
         }

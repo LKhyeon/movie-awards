@@ -1,4 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+
 .MovieList {
+	font-family: 'Cabin', sans-serif;
+
 	background-color: white;
 
 	width: calc(50% - 5vw);
@@ -8,7 +12,7 @@
 	margin-right: 1vw;
 
 	border-style: solid;
-	border-color: lightgray;
+	border-color: #6497bf;
 	border-width: 1px;
 
 	padding-left: 2vw;
@@ -17,11 +21,66 @@
 	padding-bottom: 4.5vh;
 }
 
+.MovieList .entry {
+	margin-bottom: 0.5vh;
+
+	border-style: solid;
+	border-color: #6497bf;
+	border-width: 2px;
+	border-radius: 3px;
+
+	padding-left: 1vw;
+	padding-right: 1vw;
+	padding-top: 0.7vh;
+	padding-bottom: 0.7vh;
+
+}
+
 .MovieList .KeyWord {
 	font-weight: bold;
+	font-size: 120%;
 
 	margin-top: 1vh;
 	margin-bottom: 1vh;
 }
 
+.MovieList .Nominate {
+	background-color: #6497bf;
+	color: white;
+
+	margin-right: 1vw;
+
+	border-style: solid;
+	border-color: #6497bf;
+	border-width: 2px;
+	border-radius: 3px;
+
+	padding-left: 0.6vw;
+	padding-right: 0.6vw;
+	padding-top: 0.6vh;
+	padding-bottom: 0.6vh;
+
+	transition-duration: 0.3s;
+}
+
+.MovieList .Nominate:hover {
+	background-color: #325875;
+
+	border-color: #325875;
+
+	padding-left: 0.6vw;
+	padding-right: 0.6vw;
+	padding-top: 0.6vh;
+	padding-bottom: 0.6vh;
+}
+
+.MovieList .Nominate:disabled {
+	background-color: white;
+	color: #6497bf;
+
+	border-style: solid;
+	border-color: #6497bf;
+	border-width: 2px;
+	border-radius: 3px;
+}
 
